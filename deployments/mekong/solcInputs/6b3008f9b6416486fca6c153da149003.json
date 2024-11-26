@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/Counter.sol": {
+      "content": "pragma solidity 0.8.18;\n\ncontract Counter {\n    uint256 public count;\n    uint256 public count2;\n\n    event Increment(uint256 indexed count);\n    event Increment2(uint256 indexed count);\n\n    function increment() external {\n        count += 1;\n        emit Increment(count);\n    }\n\n    function increment2() external {\n        count2 += 1;\n        emit Increment2(count2);\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
