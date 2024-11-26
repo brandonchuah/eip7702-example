@@ -2,3 +2,4 @@ artifacts/
 .env
 node_modules/
 cache/
+typechain/
